@@ -1,0 +1,64 @@
+
+
+
+/* Sports Score Body Rectangle Div  */
+/* This div covers the entire body of the page */
+.sportsScoreBodyDiv
+{
+    
+    /* background-color: white; */
+    vertical-align: middle;    
+    min-width: 500px;
+    width: 800px;
+    margin: 0 auto;
+    
+
+    /* max-width: 800px; */
+
+    /* border-radius: 10px; */
+
+    background: white;
+
+
+    /* background: #212020;     */
+    /*  background-color: #212020; */
+    /* padding: 20px; */
+    /* width: 200px; */
+    /* height: 150px; */
+
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

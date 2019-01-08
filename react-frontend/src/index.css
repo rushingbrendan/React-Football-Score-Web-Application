@@ -1,0 +1,216 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-event-info {
+  margin-left: 20px;
+}
+
+
+/*
+
+  FILE          : SportsMonitor.css
+  PROJECT       : Sports Monitor
+  PROGRAMMER    : Brendan Rushing & Conor Macpherson
+  FIRST VERSION : 2018-12-12
+  DESCRIPTION   :   
+
+    CSS styles
+
+*/
+
+
+/* Blue         color:  #0092db;    */
+/* Red          color:  #CC0000;    */
+
+
+.headerTopBar
+{
+    background-color:    white;
+}
+
+body
+{
+    /* background-color:  black;    */
+    background-color:   #f0ecec;
+    min-width: 500px;
+}
+
+h1
+{
+    color:             black;
+    font-size:            42px;
+    font-family:        Arial;
+    text-align:         center;
+}
+
+
+
+/* Sports Score Body Rectangle Div  */
+/* This div covers the entire body of the page */
+/* .leftSide */
+/* { */
+    
+/* vertical-align: left; */
+/* } */
+
+/* Sports Score Body Rectangle Div  */
+/* This div covers the entire body of the page */
+.sportsScoreBodyDiv
+{
+    
+    /* background-color: white; */
+    vertical-align: middle;    
+    min-width: 500px;
+    width: 800px;
+    margin: 0 auto;
+    
+
+    /* max-width: 800px; */
+
+    /* border-radius: 10px; */
+
+    background: white;
+
+
+    /* background: #212020;     */
+    /*  background-color: #212020; */
+    /* padding: 20px; */
+    /* width: 200px; */
+    /* height: 150px; */
+
+}
+
+
+/* Sports Score Rectangle Div  */
+.sportsScoreDiv
+{
+    margin: auto;
+    width: 50%;    
+    /* background-color: white; */
+    vertical-align: middle;    
+    min-width: 500px;
+
+    border-radius: 10px;
+
+    background: white;
+
+
+    /* background: #212020;     */
+    /*  background-color: #212020; */
+    padding: 20px; 
+    width: 200px;
+    /* height: 150px; */
+
+}
+/* Called when sports score div is selected */
+.sportsScoreDiv:hover
+{
+    color: white !important;
+    background-image:none !important;
+    /* background-color: #424141 !important; */
+    background-color: #f1e7bd !important;
+    
+}
+
+/* Team Name Text */
+.teamName
+{
+    font-family: "Helvetica Neue"; 
+    font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 15px;
+    color: black;
+    
+    margin: 2%;     /* reduce spacing after paragraph */
+}
+
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+.buyNowButton
+{
+    background-color: #CC0000;
+    
+    border: none;
+    color: white;
+    padding: 8px 16px;
+
+
+     font-family: "Helvetica Neue"; 
+     font-size: 20px; 
+     font-style: normal; 
+     font-variant: normal; 
+     font-weight: 600; 
+     line-height: 24px;
+     color: white;
+
+     -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+}
+
+.buyNowButton:hover
+{
+    color: white !important;
+    background-image:none !important;
+    background-color:blue !important;
+    
+}
