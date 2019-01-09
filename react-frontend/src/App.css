@@ -17,7 +17,7 @@
 
     /* border-radius: 10px; */
 
-    background: white;
+    background: rgb(131, 169, 224);
 
 
     /* background: #212020;     */
@@ -28,6 +28,14 @@
 
 }
 
+.sportsMonitorHeader
+{
+  margin: 0 auto;
+  background: white;
+  position:absolute;
+  left:0;
+  right:0;
+}
 
 
 .App {

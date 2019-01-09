@@ -129,6 +129,28 @@ h1
 }
 
 
+.sportsMonitorHeader
+{
+
+    margin: auto;
+    width: 50%;    
+    /* background-color: white; */
+    vertical-align: middle;    
+    min-width: 500px;
+
+    border-radius: 10px;
+
+    background: rgb(156, 213, 228);
+
+
+    /* background: #212020;     */
+    /*  background-color: #212020; */
+    /* padding: 20px; */
+    /* width: 200px; */
+    /* height: 150px; */
+
+}
+
 /* Sports Score Rectangle Div  */
 .sportsScoreDiv
 {

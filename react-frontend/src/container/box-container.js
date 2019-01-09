@@ -15,6 +15,8 @@ class BoxCon extends React.Component{
             
             handleClick={this.props.loadScoreData} buttonNumber={this.props.id} data={this.props.data}
 
+            getTeams={this.props.loadTeamData} buttonNumber={this.props.id} data={this.props.data}
+
             
             ></Box>
         )
