@@ -1,6 +1,6 @@
 import React from "react";
-//import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import TeamInformation from "../component/teamInformation.js";
 
 class Box extends React.Component{
 
@@ -103,6 +103,7 @@ return (
 {dataArray.map(dataResult =>            
 <div  className='sportsScoreDiv'>
     <table border="0" width="90%" align="center">
+    <tbody>
         <tr>    
         <td align="left"><p className='teamName'>{dataResult.awayTeamName} {dataResult.awayTeamSpread}</p></td>    
         <td align="right"><p className='teamName'>{dataResult.awayTeamScore}</p></td>    
@@ -113,6 +114,7 @@ return (
         <td align="right"><p className='teamName'>{dataResult.homeTeamScore}</p></td>    
         <td align="right"><p className='teamName'></p></td>                      
         </tr> 
+    </tbody>
     </table>
 </div> 
 )}
@@ -125,12 +127,8 @@ return (
 
 <Route exact={true} path="/teams" render={() => (
 <div>
-
-
-
-
-                    
-
+<TeamInformation>    
+</TeamInformation> 
 </div>
 )} />
 
@@ -144,10 +142,5 @@ return (
 
 }
 
-const scores = ({ match }) => (
-    <div>
-      <h1>WELCOME TO BLOG</h1>
-    </div>
-  )
 
 export default Box;

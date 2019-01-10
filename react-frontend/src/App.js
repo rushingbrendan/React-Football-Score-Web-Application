@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Button,Nav,Navbar, NavItem,NavDropdown, MenuItem, PageHeader,Jumbotron, 
   SplitButton, ButtonToolbar, ButtonGroup,Dropdown, DropdownButton } from 'react-bootstrap';
