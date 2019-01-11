@@ -5,11 +5,22 @@ import datetime
 import re
 import config
 import mysql.connector
+import argparse
+
+parser = argparse.ArgumentParser(description="Select date to scrape from.")
+parser.add_argument("--date", metavar='-d', type=str, nargs=1, help="Date time in form of yyyy-mm-dd")
+
+args = parser.parse_args()
 
 
 today = datetime.datetime.now()
 comparissonDate = datetime.datetime(2011, 8, 11)
 appendingDate = datetime.datetime(2011, 8, 11)
+
+if args.date is not None:
+	comparissonDate = datetime.datetime.strptime(args.date[0], "%Y-%m-%d")
+	appendingDate = datetime.datetime.strptime(args.date[0], "%Y-%m-%d")
+
 i = 0
 
 numericEncapsulate = re.compile(r"(\d+)")
@@ -66,7 +77,7 @@ teamAbbreviations = [
 
 previousDate = "0"
 
-while comparissonDate < today:
+while comparissonDate.date() < today.date():
 
 	# Get the current week.
 	week = datetime.timedelta(weeks=i)
@@ -77,7 +88,6 @@ while comparissonDate < today:
 	comparissonDate = datetime.datetime.strptime(date, "%Y-%m-%d")
 
 	if comparissonDate == previousDate:
-		print("N")
 		continue
 
 	previousDate = datetime.datetime.strptime(date, "%Y-%m-%d")
@@ -154,8 +164,6 @@ while comparissonDate < today:
 			game.remove("Off")
 			game.remove("Off")
 
-		print(game)
-
 		if "PickPreviewTrendsConsensusLine" in game:
 			print("Finished retrieving game data.")
 			exit()
@@ -168,14 +176,10 @@ while comparissonDate < today:
 		if game.__contains__("OT"):
 			homeTeamScores = list(map(int, game[teamsNameIndices[0] + 10: teamsNameIndices[0] + 15]))
 			awayTeamScores = list(map(int, game[teamsNameIndices[0] + 17: teamsNameIndices[0] + 22]))
-			print("home team scores OT = ", game[teamsNameIndices[0] + 10: teamsNameIndices[0] + 15])
-			print("away team scores OT = ", game[teamsNameIndices[0] + 17: teamsNameIndices[0] + 22])
 		# Otherwise, get the regular scores.
 		else:
 			homeTeamScores = list(map(int, game[teamsNameIndices[0] + 8: teamsNameIndices[0] + 12]))
 			awayTeamScores = list(map(int, game[teamsNameIndices[0] + 14: teamsNameIndices[0] + 18]))
-			print("home team scores = ", game[teamsNameIndices[0] + 8: teamsNameIndices[0] + 12])
-			print("away team scores = ", game[teamsNameIndices[0] + 14: teamsNameIndices[0] + 18])
 
 		# Get the date of the game from the numeric date at the 2nd index of the game stats
 		# and the yyyy-mm portion of the date string.
@@ -224,7 +228,6 @@ while comparissonDate < today:
 		awayTeamId = teamId[0]
 
 
-		print(game)
 		# Get the total scores for each team
 		homeTeamTotal = sum(homeTeamScores)
 		awayTeamTotal = sum(awayTeamScores)
