@@ -205,9 +205,8 @@ while comparissonDate.date() < today.date():
 		# Insert the game information
 		cursor = connection.cursor()
 
-		query = "INSERT INTO Game (awayTeamSpread, gameTotalLine, gameDate) VALUES (%s, %s, %s)"
-		values = (gameDay)
-		cursor.execute(query, values)
+		query = "INSERT INTO Game (gameDate) VALUE ('" + str(gameDay) + "');"
+		cursor.execute(query)
 		connection.commit()
 
 
