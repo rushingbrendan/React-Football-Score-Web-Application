@@ -76,6 +76,7 @@ teamAbbreviations = [
 ]
 
 previousDate = "0"
+previousGame = ""
 
 while comparissonDate.date() < today.date():
 
@@ -109,6 +110,12 @@ while comparissonDate.date() < today.date():
 
 	# Remove all of the extra information from the game stats and format the output.
 	gameStats = soup.get_text()
+
+	if gameStats == previousGame:
+		continue
+
+	previousGame = gameStats
+
 	gameStats = gameStats.replace("\n", " ")
 	gameStats = gameStats.replace("\r", "")
 	gameStats = gameStats.replace("\t", "")
@@ -167,6 +174,10 @@ while comparissonDate.date() < today.date():
 		if "PickPreviewTrendsConsensusLine" in game:
 			print("Finished retrieving game data.")
 			exit()
+		
+		if "LIVE" in game:
+			continue
+
 
 		# Create the home team and away team scores arrays
 		homeTeamScores = []
@@ -195,7 +206,7 @@ while comparissonDate.date() < today.date():
 		cursor = connection.cursor()
 
 		query = "INSERT INTO Game (awayTeamSpread, gameTotalLine, gameDate) VALUES (%s, %s, %s)"
-		values = ("0.0", "0.0", gameDay)
+		values = (gameDay)
 		cursor.execute(query, values)
 		connection.commit()
 
