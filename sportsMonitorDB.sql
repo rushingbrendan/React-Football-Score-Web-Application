@@ -60,9 +60,6 @@ CREATE TABLE IF NOT EXISTS Game (
 
 	PK_GameID int unsigned AUTO_INCREMENT PRIMARY KEY NOT NULL,
     
-    awayTeamSpread double NOT NULL,
-    gameTotalLine double NOT NULL,
-    
     -- ISO8601 yyyy-mm-dd
     gameDate date NOT NULL
     
