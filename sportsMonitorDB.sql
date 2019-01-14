@@ -60,9 +60,6 @@ CREATE TABLE IF NOT EXISTS Game (
 
 	PK_GameID int unsigned AUTO_INCREMENT PRIMARY KEY NOT NULL,
     
-    awayTeamSpread double NOT NULL,
-    gameTotalLine double NOT NULL,
-    
     -- ISO8601 yyyy-mm-dd
     gameDate date NOT NULL
     
@@ -101,3 +98,26 @@ CREATE TABLE IF NOT EXISTS GameScores (
         ON DELETE CASCADE
     
 )Engine=InnoDB;
+
+
+-- Procedure Name: spSetVehicleToHold
+-- Purpose: Sets a vehicle to hold status
+
+-- Parameters: VIN Number
+-- Returns: Pass or Fail  
+DROP procedure IF EXISTS `spWeekScoreData`;
+DELIMITER $$
+USE `sportsMonitor`$$		
+CREATE PROCEDURE `spWeekScoreData` (IN inputWeek int(2), IN inputSeason VARCHAR(15))
+BEGIN
+	
+SELECT sportsMonitor.Game.PK_GameID, sportsMonitor.Game.gameDate
+
+FROM sportsMonitor.Game 
+WHERE YEAR(sportsMonitor.Game.GameDate) = inputSeason;
+     
+
+END
+$$ 
+
+
