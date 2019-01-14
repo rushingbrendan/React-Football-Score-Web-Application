@@ -112,6 +112,7 @@ while comparissonDate.date() < today.date():
 	gameStats = soup.get_text()
 
 	if gameStats == previousGame:
+		i += 1
 		continue
 
 	previousGame = gameStats
