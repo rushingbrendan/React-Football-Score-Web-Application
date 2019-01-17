@@ -12,7 +12,6 @@ parser.add_argument("--date", metavar='-d', type=str, nargs=1, help="Date time i
 
 args = parser.parse_args()
 
-
 today = datetime.datetime.now()
 comparissonDate = datetime.datetime(2011, 8, 11)
 appendingDate = datetime.datetime(2011, 8, 11)
@@ -20,6 +19,7 @@ appendingDate = datetime.datetime(2011, 8, 11)
 if args.date is not None:
 	comparissonDate = datetime.datetime.strptime(args.date[0], "%Y-%m-%d")
 	appendingDate = datetime.datetime.strptime(args.date[0], "%Y-%m-%d")
+
 
 i = 0
 
@@ -128,6 +128,8 @@ while comparissonDate.date() < today.date():
 	gameStats = gameStats.replace("Consensus", "")
 	gameStats = gameStats.replace("Line", "")
 	gameStats = gameStats.replace("BET GRAPH        Sorry, but this bet graph is unavailable", "")
+	gameStats = gameStats.replace("Matchup", "")
+	gameStats = gameStats.replace("end", "")
 	gameStats = gameStats.replace(".Covering By \"0\" - \"7\"Covering By \"8\" - \"15\"Covering By \"16\"+", "")
 
 
@@ -173,9 +175,11 @@ while comparissonDate.date() < today.date():
 			game.remove("Off")
 
 		if "PickPreviewTrendsConsensusLine" in game:
-			print("Finished retrieving game data.")
 			exit()
-		
+
+		if game[4] == '18':
+			del game[4]
+
 		if "LIVE" in game:
 			continue
 
@@ -206,8 +210,9 @@ while comparissonDate.date() < today.date():
 		# Insert the game information
 		cursor = connection.cursor()
 
-		query = "INSERT INTO Game (gameDate) VALUE ('" + str(gameDay) + "');"
-		cursor.execute(query)
+		query = "INSERT INTO Game (FK_HomeTeamID, FK_AwayTeamID, gameDate) VALUES (%s, %s, %s);"
+		values = (teamAbbreviations.index (' ' + homeTeam) + 1, teamAbbreviations.index(' ' + awayTeam) + 1 , '"' + str(gameDay) + '"')
+		cursor.execute(query % values)
 		connection.commit()
 
 
