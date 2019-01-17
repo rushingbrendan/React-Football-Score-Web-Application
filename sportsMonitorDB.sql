@@ -60,9 +60,22 @@ CREATE TABLE IF NOT EXISTS Game (
 
 	PK_GameID int unsigned AUTO_INCREMENT PRIMARY KEY NOT NULL,
     
+    FK_HomeTeamID smallint NOT NULL,
+    FK_AwayTeamID smallInt NOT NULL,
+
     -- ISO8601 yyyy-mm-dd
-    gameDate date NOT NULL
-    
+    gameDate date NOT NULL,
+
+    CONSTRAINT FK_HomeTeamID
+        FOREIGN KEY (FK_HomeTeamID)
+        REFERENCES Team (PK_TeamID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT FK_AwayTeamID
+        FOREIGN KEY (FK_AwayTeamID)
+        REFERENCES Team (PK_TeamID)
+        ON DELETE CASCADE
+
 )Engine=InnoDB;
 ALTER TABLE Game AUTO_INCREMENT=1;
 
