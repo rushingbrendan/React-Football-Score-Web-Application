@@ -111,3 +111,26 @@ CREATE TABLE IF NOT EXISTS GameScores (
         ON DELETE CASCADE
     
 )Engine=InnoDB;
+
+
+-- Procedure Name: spSetVehicleToHold
+-- Purpose: Sets a vehicle to hold status
+
+-- Parameters: VIN Number
+-- Returns: Pass or Fail  
+DROP procedure IF EXISTS `spWeekScoreData`;
+DELIMITER $$
+USE `sportsMonitor`$$		
+CREATE PROCEDURE `spWeekScoreData` (IN inputWeek int(2), IN inputSeason VARCHAR(15))
+BEGIN
+	
+SELECT sportsMonitor.Game.PK_GameID, sportsMonitor.Game.gameDate
+
+FROM sportsMonitor.Game 
+WHERE YEAR(sportsMonitor.Game.GameDate) = inputSeason;
+     
+
+END
+$$ 
+
+
