@@ -14,8 +14,13 @@
 
 .SpaceUnderTitle
 {
-  line-height: 200px;
+  height: 50px;
   
+}
+
+.HeaderLinks
+{
+  display: inline-block;
 }
 
 .HeaderTitle

@@ -53,9 +53,13 @@ return (
 <div className="HeaderContainer">
 <div className="SpaceAboveTitle"></div>
 <h1 className="HeaderTitle">Sports Monitor</h1>
-<Link to="/home"><button title="/home" >Home</button></Link>
-<Link to="/teams"><button to="/teams">Teams</button></Link>
-<Link to="/scores"><button to="/scores">Scores</button></Link>
+
+
+<div className="HeaderLinks">
+    <Link to="/home"><div title="/home" >Home</div></Link>
+    <Link to="/teams"><div to="/teams">Teams</div></Link>
+    <Link to="/scores"><div to="/scores">Scores</div></Link>
+</div>
 <div className="SpaceUnderTitle"></div>
 </div>
 
