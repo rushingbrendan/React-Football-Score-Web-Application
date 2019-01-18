@@ -7,8 +7,8 @@ class Box extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            currentSeason: "2018-2017",
-            currentWeek: "1",
+            currentSeason: "2016",
+            currentWeek: "50",
         };
     }
 
@@ -68,15 +68,15 @@ return (
 </div>
 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
 <select name="season" onChange={this.handleSelectChange}>
-<option value="2019-2018" >2019-2018</option>
-<option value="2018-2017">2018-2017</option>
-<option value="2017-2016">2017-2016</option>
-<option value="2016-2015">2016-2015</option>
-<option value="2015-2014">2015-2014</option>
-<option value="2014-2013">2014-2013</option>
-<option value="2013-2012">2013-2012</option>
-<option value="2012-2011">2012-2011</option>
-<option value="2011-2010">2011-2010</option>
+<option value="2019" >2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
 </select>
 </div>
 
