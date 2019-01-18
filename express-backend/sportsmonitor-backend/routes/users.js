@@ -31,7 +31,8 @@ router.get('/:season/:week', function(req, res, next) {
 
 
   /* Get data from MySQL database */
-  connection.query('SELECT * FROM sportsMonitor.Team', function (err, rows, fields) {
+  //connection.query('CALL spWeekGetScoreData(50,2015)', function (err, rows, fields) {
+    connection.query('CALL spWeekGetScoreData('+weekInput+','+seasonInput+');', function (err, rows, fields) {
     if (err) throw err
     console.log('The solution is: ', rows[0])
 
@@ -43,7 +44,22 @@ router.get('/:season/:week', function(req, res, next) {
 
 });
 
+/* GET team name data */
+router.get('/teamNames', function(req, res, next) {
 
+
+  /* Get data from MySQL database */
+  connection.query('SELECT cityName, cityAbbreviation FROM sportsMonitor.Team', function (err, rows, fields) {
+    if (err) throw err
+    console.log('The solution is: ', rows[0])
+
+    /* Send data back to user requesting */
+    res.send({teamData: rows});
+  })
+
+
+
+});
 
 
 
