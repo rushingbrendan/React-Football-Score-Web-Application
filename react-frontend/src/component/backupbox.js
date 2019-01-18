@@ -80,7 +80,7 @@ componentDidMount(){
 
 
 
-{this.state.scoreData[0][0].map(currentScoreData=>
+{this.state.scoreData[0].map(currentScoreData=>
     <div >
         <p>{currentScoreData.PK_GameID}</p>
         <p>{currentScoreData.homeTeamPoints}</p>

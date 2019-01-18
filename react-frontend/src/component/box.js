@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import TeamInformation from "../component/teamInformation.js";
 import ScoreData from "../component/scoreData.js";
 
+
 class Box extends React.Component{
 
     constructor(props) {
@@ -41,23 +42,29 @@ const currentButton = this.props.buttonNumber;
 return (
 
 
+//<div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} className="headerButtons">
+//</div>
 
 
 <div>
 <Router>
 
 
-
-
-
-<div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} className="headerButtons">
-
+<div className="HeaderContainer">
+<div className="SpaceAboveTitle"></div>
+<h1 className="HeaderTitle">Sports Monitor</h1>
 <Link to="/home"><button title="/home" >Home</button></Link>
-
 <Link to="/teams"><button to="/teams">Teams</button></Link>
 <Link to="/scores"><button to="/scores">Scores</button></Link>
-
+<div className="SpaceUnderTitle"></div>
 </div>
+
+
+
+
+
+
+
 
 <Route exact={true} path="/scores" render={() => (
 <ScoreData></ScoreData>

@@ -1,6 +1,30 @@
 
+.HeaderContainer
+{
 
+  height: 100px;
+  background-color: rgb(41, 168, 247);
+}
 
+.SpaceAboveTitle
+{
+  height:10px;
+  
+}
+
+.SpaceUnderTitle
+{
+  line-height: 200px;
+  
+}
+
+.HeaderTitle
+{
+ text-indent: 0%;
+ color: white;
+ text-align: left;
+ text-indent:1em;
+}
 /* Sports Score Body Rectangle Div  */
 /* This div covers the entire body of the page */
 .sportsScoreBodyDiv

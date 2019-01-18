@@ -9,7 +9,7 @@ constructor(props) {
     this.state = {
         selectedWeek: 1,
         selectedSeason: 2015,
-        scoreData:[ [] ]          
+scoreData:[ [] ]          
     };
 }
 
