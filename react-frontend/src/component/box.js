@@ -7,7 +7,7 @@ import headerLogo from "../assets/database.svg";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIgloo, faFootballBall, faHome } from '@fortawesome/free-solid-svg-icons'
+import { faIgloo, faFootballBall, faHome, faBaseballBall, faBasketballBall, faHockeyPuck } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faIgloo);
 
@@ -15,6 +15,10 @@ library.add(faIgloo);
 
 library.add(faFootballBall);   
 library.add(faHome);
+library.add(faBaseballBall);
+library.add(faBasketballBall);
+library.add(faHockeyPuck);
+
 
 
 
@@ -90,7 +94,21 @@ return (
     
     
     <FontAwesomeIcon icon="football-ball" color="white" size="2x" />
-    <Link to="/Football" to="/football"className="headerLinks">Football</Link>
+    <Link to="/football"className="headerLinks">Football</Link>
+
+
+    <FontAwesomeIcon icon="baseball-ball" color="white" size="2x" />
+    <Link to="/baseball"className="headerLinks">Baseball</Link>
+
+   
+    <FontAwesomeIcon icon="basketball-ball" color="white" size="2x" />
+    <Link to="/basketball"className="headerLinks">Basketball</Link>
+    
+   
+    <FontAwesomeIcon icon="hockey-puck" color="white" size="2x" />
+    <Link to="/hockey"className="headerLinks">Hockey</Link>
+
+    
     
 </div>  
 <div className="SpaceBelowTitle"></div>  
