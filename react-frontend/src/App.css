@@ -44,7 +44,7 @@
 }
 .SpaceBelowTitle
 {
-  height:5px;
+  height:10px;
   background-color: rgb(41, 168, 247);
   
 }
@@ -59,11 +59,26 @@
 {
   display: inline-block;
   background-color: rgb(41, 168, 247);
-  margin-left: 20px;
-  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 40px;
+  font-size: 28px;
   font-family: "Helvetica Neue"; 
   color:white;
   
+  
+}
+
+
+
+.headerIconAlign
+{
+
+}
+
+
+.headerLinkSpacing
+{
+  width:100px;
 }
 
 .headerLinks:hover

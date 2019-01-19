@@ -5,6 +5,24 @@ import ScoreData from "../component/scoreData.js";
 import headerLogo from "../assets/database.svg";
 
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo, faFootballBall, faHome } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faIgloo);
+
+
+
+library.add(faFootballBall);   
+library.add(faHome);
+
+
+
+
+
+
+
+
 class Box extends React.Component{
 
     constructor(props) {
@@ -64,12 +82,18 @@ return (
 <div className="SpaceBelowTitle"></div>
 
 
-<div className="LinkContainer">
-    <Link to="/home" title="/home" className="headerLinks">Home</Link>
-    <Link to="/teams" to="/teams"className="headerLinks">Teams</Link>
-    <Link to="/scores" to="/scores"className="headerLinks">Scores</Link>
-    </div>    
 
+<div className="LinkContainer">
+
+<FontAwesomeIcon icon="home" color="white" size="2x" className="headerIconAlign"></FontAwesomeIcon>
+    <Link to="/home" title="/home" className="headerLinks">Home</Link>    
+    
+    
+    <FontAwesomeIcon icon="football-ball" color="white" size="2x" />
+    <Link to="/Football" to="/football"className="headerLinks">Football</Link>
+    
+</div>  
+<div className="SpaceBelowTitle"></div>  
 
 
 <Route exact={true} path="/scores" render={() => (
