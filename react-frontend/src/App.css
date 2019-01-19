@@ -1,14 +1,51 @@
 
+
+.headerLogo
+{
+
+  height: 70%;
+  float:left;
+  margin-left: 20px;
+
+}
+
+
+
 .HeaderContainer
 {
 
-  height: 100px;
+  height: 120px;
   background-color: rgb(41, 168, 247);
+    
+}
+.LinkContainer
+{
+  width: 100%;
+  background-color: rgb(41, 168, 247);  
+}
+
+.HeaderTitle
+{
+ color: white;
+ margin-left: 20px;
+ float:left;
+ font-family: "Helvetica Neue"; 
+ font-size: 50px;
+
+
+ 
 }
 
 .SpaceAboveTitle
 {
   height:10px;
+  background-color: rgb(41, 168, 247);
+  
+}
+.SpaceBelowTitle
+{
+  height:5px;
+  background-color: rgb(41, 168, 247);
   
 }
 
@@ -18,18 +55,27 @@
   
 }
 
-.HeaderLinks
+.headerLinks
 {
   display: inline-block;
+  background-color: rgb(41, 168, 247);
+  margin-left: 20px;
+  font-size: 24px;
+  font-family: "Helvetica Neue"; 
+  color:white;
+  
 }
 
-.HeaderTitle
+.headerLinks:hover
 {
- text-indent: 0%;
- color: white;
- text-align: left;
- text-indent:1em;
+    color:rgb(189, 188, 188) !important;
+    background-image:none !important;
+    
+    
 }
+
+
+
 /* Sports Score Body Rectangle Div  */
 /* This div covers the entire body of the page */
 .sportsScoreBodyDiv

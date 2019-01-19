@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import TeamInformation from "../component/teamInformation.js";
 import ScoreData from "../component/scoreData.js";
+import headerLogo from "../assets/database.svg";
 
 
 class Box extends React.Component{
@@ -50,23 +51,24 @@ return (
 <Router>
 
 
+
+
+
 <div className="HeaderContainer">
-<div className="SpaceAboveTitle"></div>
-<h1 className="HeaderTitle">Sports Monitor</h1>
+    <br className="SpaceAboveTitle"></br>
+    <img  src={headerLogo}  alt="headerLogo" className="headerLogo"/>
 
-
-<div className="HeaderLinks">
-    <Link to="/home"><div title="/home" >Home</div></Link>
-    <Link to="/teams"><div to="/teams">Teams</div></Link>
-    <Link to="/scores"><div to="/scores">Scores</div></Link>
+    <h1 className="HeaderTitle">Sports Monitor</h1>
+    
 </div>
-<div className="SpaceUnderTitle"></div>
-</div>
+<div className="SpaceBelowTitle"></div>
 
 
-
-
-
+<div className="LinkContainer">
+    <Link to="/home" title="/home" className="headerLinks">Home</Link>
+    <Link to="/teams" to="/teams"className="headerLinks">Teams</Link>
+    <Link to="/scores" to="/scores"className="headerLinks">Scores</Link>
+    </div>    
 
 
 
