@@ -3,7 +3,7 @@
 .headerLogo
 {
 
-  height: 70%;
+  height: 85%;
   float:left;
   margin-left: 20px;
 
@@ -44,7 +44,7 @@
 }
 .SpaceBelowTitle
 {
-  height:10px;
+  height: 20px;
   background-color: rgb(41, 168, 247);
   
 }
