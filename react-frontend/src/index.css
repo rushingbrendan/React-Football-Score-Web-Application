@@ -295,7 +295,7 @@ h1
 
 .spaceUnderTeamData
 {
-  height: 100px;
+  height: 25px;
 }
 .footballScoresContainer
 {
@@ -315,6 +315,9 @@ h1
   border-color: #CBCCCE;
 
   margin-left:25px;
+  margin-bottom: 25px;
+  display:inline-block;
+  
 
   /* APPLE: #E6E6EB   */
 }
