@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import TeamInformation from "../component/teamInformation.js";
-import ScoreData from "../component/scoreData.js";
+import FootballScores from "./FootballScores.js";
 import headerLogo from "../assets/database.svg";
 
 
@@ -89,33 +89,38 @@ return (
 
 <div className="LinkContainer">
 
-<FontAwesomeIcon icon="home" color="white" size="2x" className="headerIconAlign"></FontAwesomeIcon>
-    <Link to="/home" title="/home" className="headerLinks">Home</Link>    
+    <Link to="/home" title="/home" className="headerLinks">
+    <FontAwesomeIcon icon="home" color="white" size="1x" className="headerIconAlign">
+    </FontAwesomeIcon>&nbsp;Home</Link>    
     
+    <Link to="/football"className="headerLinks">
+    <FontAwesomeIcon icon="football-ball" color="white" size="1x" className="headerIconAlign"/>
+    &nbsp;Football</Link>
+
+    <Link to="/baseball"className="headerLinks">
+    <FontAwesomeIcon icon="baseball-ball" color="white" size="1x" className="headerIconAlign"/>
+    &nbsp;Baseball</Link>
+
+    <Link to="/basketball"className="headerLinks">
+    <FontAwesomeIcon icon="basketball-ball" color="white" size="1x" className="headerIconAlign"/>
+    &nbsp;Basketball</Link>
     
-    <FontAwesomeIcon icon="football-ball" color="white" size="2x" />
-    <Link to="/football"className="headerLinks">Football</Link>
-
-
-    <FontAwesomeIcon icon="baseball-ball" color="white" size="2x" />
-    <Link to="/baseball"className="headerLinks">Baseball</Link>
-
-   
-    <FontAwesomeIcon icon="basketball-ball" color="white" size="2x" />
-    <Link to="/basketball"className="headerLinks">Basketball</Link>
-    
-   
-    <FontAwesomeIcon icon="hockey-puck" color="white" size="2x" />
-    <Link to="/hockey"className="headerLinks">Hockey</Link>
+    <Link to="/hockey"className="headerLinks">
+    <FontAwesomeIcon icon="hockey-puck" color="white" size="1x" className="headerIconAlign"/>
+    &nbsp;Hockey</Link>
 
     
     
 </div>  
-<div className="SpaceBelowTitle"></div>  
+<div className="SpaceBelowLinks"></div>  
 
 
-<Route exact={true} path="/scores" render={() => (
-<ScoreData></ScoreData>
+
+
+
+
+<Route exact={true} path="/football" render={() => (
+<FootballScores></FootballScores>
 )} />
 
 
@@ -128,8 +133,12 @@ return (
 </div>
 )} />
 
+
+
 </Router>
+
 </div>
+
 )
         
 }

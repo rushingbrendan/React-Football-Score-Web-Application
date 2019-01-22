@@ -70,10 +70,45 @@ ol, ul {
 /* Blue         color:  #0092db;    */
 /* Red          color:  #CC0000;    */
 
+.headerLinks
+{
+  
+ /* */ 
+ /* margin-left: 20px;*/
+ margin: 5px;
+}
+
+
+.headerLinks:hover
+{
+  
+  color: rgb(241, 221, 221) !important;
+    background-image:none !important;
+    text-decoration: none !important;
+    /* background-color: #424141 !important; */
+    
+}
+
+.headerIconAlign
+{
+  
+}
+.headerIconAlign:hover
+{
+  color: rgb(241, 221, 221) !important;
+  background-image:none !important;
+  text-decoration: none !important;
+}
+
 
 .headerTopBar
 {
     background-color:    white;
+}
+
+.SpaceBelowTitle
+{
+  height: 10px;
 }
 
 body
@@ -235,4 +270,35 @@ h1
     background-image:none !important;
     background-color:blue !important;
     
+}
+
+
+.LinkContainer
+{
+  text-decoration: none;
+}
+
+.sportsScoreTitle
+{
+  color: #1d1e1f;
+  text-align: left;
+  text-indent: 25px;
+  font-family: "Open Sans";
+}
+
+
+.teamNamesContainer
+{
+  float: left;
+  text-indent: 10px;
+}
+
+.spaceUnderTeamData
+{
+  height: 100px;
+}
+.footballScoresContainer
+{
+  background-color: #EDEEF0;
+  color: black;
 }
